@@ -10,8 +10,8 @@ const DogCatalog = () => {
                 </div>
             </div>
             <div class="dog-grid" id="dog-grid">
-                // Dog cards go here
-                // Template for a dog card:
+                {/* Dog cards go here */}
+                {/* Template for a dog card: */}
                 {/* <a href="#" class="dog-card">
                     <div class="avatar">
                         <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Dog" />
