@@ -14,9 +14,9 @@ const Home = ({ onViewCatalog }) => {
   return (
     <div className="home">
       <section className="hero">
-        <p className="eyebrow">Safe daytime care for dogs</p>
+        <p className="intro">Safe daytime care for dogs</p>
         <h1>A second home while you're at work.</h1>
-        <p className="lede">
+        <p className="tagline">
           Doggy Daycare welcomes dogs for play, rest, and meals on weekdays.
         </p>
         <button className="btn-primary" onClick={onViewCatalog}>
