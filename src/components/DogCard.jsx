@@ -2,7 +2,7 @@ const DogCard = ({ dog }) => {
   return (
     <a href="#" className="dog-card">
       <div className="avatar">
-        <img src={dog.image} alt={dog.name} />
+        <img src={dog.img} alt={dog.name} />
       </div>
       <div className="name">{dog.name}</div>
       <div className="card-meta">
@@ -10,8 +10,8 @@ const DogCard = ({ dog }) => {
         <div className="chip mono">{dog.age} yrs</div>
       </div>
       <div className="card-status">
-        <span className={`dot ${dog.checkedIn ? 'in' : 'out'}`}></span>
-        {dog.checkedIn ? 'Checked in today' : 'Not checked in today'}
+        <span className={`dot ${dog.present ? 'in' : 'out'}`}></span>
+        {dog.present ? 'Checked in today' : 'Not checked in today'}
       </div>
       <span className="card-arrow">View profile →</span>
     </a>
