@@ -1,3 +1,5 @@
+import '../styles/Home.css';
+
 const Home = ({ onViewCatalog }) => {
   const stats = [
     { value: "06:30–18:00", label: "Opening hours, Mon–Fri" },
