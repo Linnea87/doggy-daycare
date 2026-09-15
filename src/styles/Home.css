@@ -6,6 +6,7 @@
 
 .hero {
   --overlay: rgba(30, 42, 34, 0.75);
+  --hero-fg: #F3F6F0;
   position: relative;
   min-height: 420px;
   display: flex;
@@ -16,7 +17,7 @@
     url('/hero-dogs.jpg');
   background-size: cover;
   background-position: center;
-  color: var(--bg);
+  color: var(--hero-fg);
 }
 
 .hero-content {
@@ -39,12 +40,12 @@
   font-size: 1.9rem;
   line-height: 1.1;
   margin: 0 0 16px;
-  color: var(--bg);
+  color: var(--hero-fg);
 }
 
 .tagline {
   font-size: 1.05rem;
-  color: var(--bg);
+  color: var(--hero-fg);
   max-width: 40ch;
   margin: 0 auto 24px;
 }
