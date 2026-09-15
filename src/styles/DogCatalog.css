@@ -1,0 +1,12 @@
+.shell {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-inline: 20px;
+}
+
+.dog-grid {
+    padding: 18px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
+    gap: 18px;
+}
