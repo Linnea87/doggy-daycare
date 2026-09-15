@@ -1,3 +1,4 @@
+/* Header: logo and page navigation */
 .site-header {
   position: sticky;
   top: 0;
@@ -37,6 +38,7 @@
   cursor: pointer;
 }
 
+/* Highlights the button matching the current page */
 .site-header nav button.active {
   background: var(--accent);
   color: var(--bg);
@@ -46,6 +48,7 @@
   background: var(--accent-bg);
 }
 
+/* Footer: shown on every page */
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 24px;

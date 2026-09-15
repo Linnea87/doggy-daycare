@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap");
 
+/* Shared color, font, and layout variables used across the whole app */
 :root {
-  --text: #5C6B60;
-  --text-h: #1E2A22;
-  --bg: #F3F6F0;
-  --border: #DCE4D6;
-  --code-bg: #EAF0E6;
-  --accent: #3B7359;
+  --text: #5c6b60;
+  --text-h: #1e2a22;
+  --bg: #f3f6f0;
+  --border: #dce4d6;
+  --code-bg: #eaf0e6;
+  --accent: #3b7359;
   --accent-bg: rgba(59, 115, 89, 0.1);
   --accent-border: rgba(59, 115, 89, 0.5);
-  --accent-2: #DB8A3F;
-  --shadow:
-    rgba(0, 0, 0, 0.06) 0 1px 2px, rgba(0, 0, 0, 0.07) 0 8px 24px;
+  --accent-2: #db8a3f;
+  --shadow: rgba(0, 0, 0, 0.06) 0 1px 2px, rgba(0, 0, 0, 0.07) 0 8px 24px;
 
-  --sans: 'Karla', system-ui, sans-serif;
-  --heading: 'Fredoka', system-ui, sans-serif;
+  --sans: "Karla", system-ui, sans-serif;
+  --heading: "Fredoka", system-ui, sans-serif;
 
   font: 18px/145% var(--sans);
   color-scheme: light dark;
@@ -23,20 +23,22 @@
   -webkit-font-smoothing: antialiased;
 }
 
+/* Same variables, swapped for a dark background */
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9CAB9F;
-    --text-h: #EAF1E7;
-    --bg: #131C16;
-    --border: #2E3D33;
-    --code-bg: #212F26;
-    --accent: #6FB08E;
+    --text: #9cab9f;
+    --text-h: #eaf1e7;
+    --bg: #131c16;
+    --border: #2e3d33;
+    --code-bg: #212f26;
+    --accent: #6fb08e;
     --accent-bg: rgba(111, 176, 142, 0.15);
     --accent-border: rgba(111, 176, 142, 0.5);
-    --accent-2: #EFA45E;
+    --accent-2: #efa45e;
   }
 }
 
+/* Base element resets and typography */
 body {
   margin: 0;
 }
