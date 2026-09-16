@@ -20,11 +20,13 @@ const DogProfile = ({ dog, onBack }) => {
             <div className="dog-profile-card">
                 <div className="dog-profile-img-wrap">
                     <img
-                        src={dog.img}
+                        className={`dog-img${!dog.img ? ' is-fallback' : ''}`}
+                        src={dog.img || `${import.meta.env.BASE_URL}dog-icon-logo.png`}
                         alt={dog.name}
                         onError={(e) => {
-                            e.target.src = `${import.meta.env.BASE_URL}dog-icon-logo.png`
-                            e.target.style.objectFit = 'contain';
+                            e.target.onerror = null;
+                            e.target.src = `${import.meta.env.BASE_URL}dog-icon-logo.png`;
+                            e.target.classList.add('is-fallback');
                         }}
                     />
 
