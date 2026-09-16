@@ -15,7 +15,7 @@ const Header = ({ page, onNavigate }) => {
           className={page === "catalog" || page === "profile" ? "active" : ""}
           onClick={() => onNavigate("catalog")}
         >
-          Dog Catalog
+          Our Dogs
         </button>
       </nav>
     </header>
