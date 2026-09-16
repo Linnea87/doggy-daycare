@@ -24,7 +24,7 @@ const DogProfile = ({ dog, onBack }) => {
                         alt={dog.name}
                         onError={(e) => {
                             e.target.src = `${import.meta.env.BASE_URL}dog-icon-logo.png`
-                            e.target.style.objectFit = 'contain';;
+                            e.target.style.objectFit = 'contain';
                         }}
                     />
 
