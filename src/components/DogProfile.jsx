@@ -19,7 +19,15 @@ const DogProfile = ({ dog, onBack }) => {
 
             <div className="dog-profile-card">
                 <div className="dog-profile-img-wrap">
-                    <img src={dog.img} alt={dog.name} />
+                    <img
+                        src={dog.img}
+                        alt={dog.name}
+                        onError={(e) => {
+                            e.target.src = `${import.meta.env.BASE_URL}dog-icon-logo.png`
+                            e.target.style.objectFit = 'contain';;
+                        }}
+                    />
+
                 </div>
 
                 <div className="dog-profile-info">
