@@ -1,9 +1,9 @@
 import "../styles/Home.css";
 
-const Home = ({ onViewCatalog }) => {
+const Home = ({ dogs, loading, onViewCatalog }) => {
   const stats = [
     { value: "06:30–18:00", label: "Opening hours, Mon–Fri" },
-    { value: "8", label: "Dogs in the registry" },
+    { value: loading ? "…" : dogs.length, label: "Dogs in the registry" },
     { value: "4", label: "Staff on site today" },
   ];
 
