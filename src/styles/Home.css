@@ -6,15 +6,14 @@
 
 .hero {
   --overlay: rgba(30, 42, 34, 0.75);
-  --hero-fg: #F3F6F0;
+  --hero-fg: #f3f6f0;
   position: relative;
   min-height: 420px;
   display: flex;
   align-items: center;
   padding: 32px 20px;
   background:
-    linear-gradient(var(--overlay), var(--overlay)),
-    url('/hero-dogs.jpg');
+    linear-gradient(var(--overlay), var(--overlay)), url("/hero-dogs.jpg");
   background-size: cover;
   background-position: center;
   color: var(--hero-fg);
@@ -94,6 +93,17 @@
   margin-top: 4px;
 }
 
+.home h2 {
+  margin: 8px 0 8px;
+}
+
+.section-sub {
+  color: var(--text);
+  font-size: 0.95rem;
+  max-width: 60ch;
+  margin: 0 0 20px;
+}
+
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -105,12 +115,22 @@
   background: var(--code-bg);
   border-radius: 14px;
   padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.step .step-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-2);
+  margin: 0 0 8px;
 }
 
 .step h3 {
   font-size: 1.05rem;
   margin: 0 0 6px;
-  color: var(--accent-2);
+  color: var(--text-h);
 }
 
 .step p {
