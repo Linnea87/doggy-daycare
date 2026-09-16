@@ -1,8 +1,11 @@
 import "../styles/DogCard.css";
 
-const DogCard = ({ dog }) => {
+const DogCard = ({ dog, onSelect }) => {
   return (
-    <a href="#" className="dog-card">
+    <a href="#" className="dog-card" onClick={(e) => {
+      e.preventDefault();
+      onSelect(dog);
+    }}>
       <div className="avatar">
         <img className="dog-img" src={dog.img} alt={dog.name} />
       </div>

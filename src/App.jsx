@@ -5,10 +5,19 @@ import Home from "./components/Home";
 import DogCatalog from "./components/DogCatalog";
 import { useDogs } from "./hooks/useDogs";
 import "./App.css";
+import DogProfile from "./components/DogProfile";
 
 const App = () => {
   const [page, setPage] = useState("home");
+  const [selectedDog, setSelectedDog] = useState(null);
   const { dogs, loading, error } = useDogs();
+  
+
+
+  const goToProfile = (dog) => {
+    setSelectedDog(dog);
+    setPage('dogProfile')
+  }
 
   return (
     <>
@@ -23,7 +32,11 @@ const App = () => {
           />
         )}
         {page === "catalog" && (
-          <DogCatalog dogs={dogs} loading={loading} error={error} />
+          <DogCatalog dogs={dogs} loading={loading} error={error} onSelectedDog={goToProfile} />
+        )}
+
+        {page === 'dogProfile' && (
+          <DogProfile dog={selectedDog} onBack={() => setPage('catalog')}></DogProfile>
         )}
       </main>
 
