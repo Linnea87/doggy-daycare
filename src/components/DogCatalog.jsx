@@ -1,7 +1,7 @@
 import DogCard from "./DogCard";
 import "../styles/DogCatalog.css";
 
-const DogCatalog = ({ dogs, loading, error }) => {
+const DogCatalog = ({ dogs, onSelectedDog, loading, error }) => {
   return (
     <div className="dog-catalog">
       <section id="view-catalog" className="shell">
@@ -21,7 +21,7 @@ const DogCatalog = ({ dogs, loading, error }) => {
         {!loading && !error && (
           <div className="dog-grid" id="dog-grid">
             {dogs.map((dog) => (
-              <DogCard key={dog.chipNumber} dog={dog} />
+              <DogCard key={dog.chipNumber} dog={dog} onSelect={onSelectedDog} />
             ))}
           </div>
         )}
