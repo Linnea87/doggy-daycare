@@ -2,7 +2,7 @@ const Header = ({ page, onNavigate }) => {
   return (
     <header className="site-header">
       <button className="logo" onClick={() => onNavigate("home")}>
-        <img src="/logo.png" alt="Doggy Daycare" />
+        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Doggy Daycare" />
       </button>
       <nav>
         <button
