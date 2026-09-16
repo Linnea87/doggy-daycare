@@ -9,8 +9,10 @@ import DogProfile from "./components/DogProfile";
 
 const App = () => {
   const [page, setPage] = useState("home");
+  const [selectedDog, setSelectedDog] = useState(null);
   const { dogs, loading, error } = useDogs();
-  const {selectedDog, setSelectedDog} = useState(null);
+  
+
 
   const goToProfile = (dog) => {
     setSelectedDog(dog);
@@ -34,7 +36,7 @@ const App = () => {
         )}
 
         {page === 'dogProfile' && (
-          <DogProfile dog={selectedDog} onBack={setPage('catalog')}></DogProfile>
+          <DogProfile dog={selectedDog} onBack={() => setPage('catalog')}></DogProfile>
         )}
       </main>
 
