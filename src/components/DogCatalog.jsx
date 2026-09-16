@@ -1,10 +1,7 @@
 import DogCard from "./DogCard";
-import { useDogs } from "../hooks/useDogs";
 import "../styles/DogCatalog.css";
 
-const DogCatalog = () => {
-  const { dogs, loading, error } = useDogs();
-
+const DogCatalog = ({ dogs, loading, error }) => {
   return (
     <div className="dog-catalog">
       <section id="view-catalog" className="shell">
