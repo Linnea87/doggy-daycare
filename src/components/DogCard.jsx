@@ -1,10 +1,22 @@
+import { useState } from "react";
 import "../styles/DogCard.css";
 
 const DogCard = ({ dog }) => {
+  const [imgFailed, setImgFailed] = useState(false);
+
   return (
     <a href="#" className="dog-card">
       <div className="avatar">
-        <img className="dog-img" src={dog.img} alt={dog.name} />
+        {imgFailed ? (
+          <div className="avatar-fallback">🐶</div>
+        ) : (
+          <img
+            className="dog-img"
+            src={dog.img}
+            alt={dog.name}
+            onError={() => setImgFailed(true)}
+          />
+        )}
       </div>
       <div className="name">{dog.name}</div>
       <div className="card-meta">
@@ -21,3 +33,4 @@ const DogCard = ({ dog }) => {
 };
 
 export default DogCard;
+
