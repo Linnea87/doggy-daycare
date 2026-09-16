@@ -12,7 +12,7 @@ const DogCard = ({ dog }) => {
         <div className="chip">{dog.age} yrs</div>
       </div>
       <div className="card-status">
-        <span className={`dot ${dog.present ? 'in' : 'home'}`}></span>
+        <span className={`dot ${dog.present ? 'in' : 'out'}`}></span>
         {dog.present ? 'Checked in today' : 'Waiting at home'}
       </div>
       <span className="card-arrow">View profile →</span>
