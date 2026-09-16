@@ -1,5 +1,6 @@
 import DogCard from "./DogCard";
 import { useDogs } from "../hooks/useDogs";
+import "../styles/DogCatalog.css";
 
 const DogCatalog = () => {
   const { dogs, loading, error } = useDogs();
