@@ -1,0 +1,4 @@
+.dog-img.is-fallback {
+    object-fit: contain;
+    margin: 20;
+}

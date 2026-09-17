@@ -1,6 +1,9 @@
 import '../styles/DogProfile.css';
+import '../styles/ImageFallback.css';
+import { getImageFallback } from '../utils/imageFallback';
 
 const DogProfile = ({ dog, onBack }) => {
+    const { src, isFallback, onError } = getImageFallback(dog.img);
     if (!dog) {
         return (
             <section className="dog-profile">
@@ -20,16 +23,11 @@ const DogProfile = ({ dog, onBack }) => {
             <div className="dog-profile-card">
                 <div className="dog-profile-img-wrap">
                     <img
-                        className={`dog-img${!dog.img ? ' is-fallback' : ''}`}
-                        src={dog.img || `${import.meta.env.BASE_URL}dog-icon-logo.png`}
+                        className={`dog-img${isFallback ? ' img-fallback' : ''}`}
+                        src={src}
                         alt={dog.name}
-                        onError={(e) => {
-                            e.target.onerror = null;
-                            e.target.src = `${import.meta.env.BASE_URL}dog-icon-logo.png`;
-                            e.target.classList.add('is-fallback');
-                        }}
+                        onError={onError}
                     />
-
                 </div>
 
                 <div className="dog-profile-info">

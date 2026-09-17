@@ -186,7 +186,3 @@
         align-items: center;
     }
 }
-
-.dog-img.is-fallback {
-    object-fit: contain;
-}
