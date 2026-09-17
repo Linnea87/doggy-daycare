@@ -10,3 +10,39 @@
     grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
     gap: 18px;
 }
+
+.catalog-filter {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    
+}
+
+.filter-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 999px;
+    margin-right: 18px;
+    background: var(--border);
+    color: var(--text);
+    font-size: 0.76rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .15s ease, color .15s ease;
+}
+
+.filter-btn.active {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.filter-btn.inactive {
+    background: var(--border);
+    color: var(--text);
+}
+
+.filter-btn:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
