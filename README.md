@@ -56,7 +56,10 @@ npm run deploy
 ## Future improvements
 
 - Let staff add notes to a dog's profile.
+- Login for dogs-parents to view notes for dog. 
 - Convert images to WebP for better performance.
+- Possibility to enter more dogs.
+
 
 ## Credits
 
