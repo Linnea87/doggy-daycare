@@ -1,9 +1,15 @@
 import '../styles/DogProfile.css';
 import '../styles/ImageFallback.css';
 import { getImageFallback } from '../utils/imageFallback';
+import { useEffect } from 'react';
 
 const DogProfile = ({ dog, onBack }) => {
     const { src, isFallback, onError } = getImageFallback(dog.img);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     if (!dog) {
         return (
             <section className="dog-profile">
