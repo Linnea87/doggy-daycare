@@ -61,6 +61,7 @@ npm run deploy
 ## Credits
 
 - Dog photo on the homepage: [Pixabay](https://pixabay.com/sv/)
+- Mockup images: [Multi Mockup Generator](https://techsini.com/multi-mockup/index.php)
 - Built by:
     -   [Linnéa Ternevik](https://github.com/Linnea87)
     -   [Erik Nordvall](https://github.com/eriknordvall)
